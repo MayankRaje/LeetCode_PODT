@@ -1,5 +1,5 @@
-# LeetCode_PODT
-
+# LeetCode_POTD
+![image](https://github.com/user-attachments/assets/a9736550-625e-4b37-9b18-5bfa64682b81)
 
 | LeetCode Link| Question Name | Short Notes|
 | :---         |     :---:      |          ---: |
