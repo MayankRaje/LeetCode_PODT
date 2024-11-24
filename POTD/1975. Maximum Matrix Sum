@@ -1,5 +1,7 @@
 //https://leetcode.com/problems/maximum-matrix-sum/discuss/6079129/Very-simple-solution-with-Brute-Force-or-Easy-to-Understand-100-Easy
-
+/** obsevation  ==> if -ve are even ==> can be made +ve by roating somehow 
+                    else if odd ==> total - 2 * min; // because remove +ve min once and then add -ve min again ==> sum -(x) +(-x) ==> sum -2x 
+**/
 T.C==>(N*N)
 S.C==>O(1)
 
@@ -26,6 +28,6 @@ public class _1975_Maximum_Matrix_Sum {
             return total;
         }
         else
-            return total - 2 * min;
+            return total - 2 * min; // because remove +ve min once and then add -ve min again ==> sum -(x) +(-x) ==> sum -2x 
     }
 }
