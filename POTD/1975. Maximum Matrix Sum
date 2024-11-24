@@ -1,0 +1,31 @@
+//https://leetcode.com/problems/maximum-matrix-sum/discuss/6079129/Very-simple-solution-with-Brute-Force-or-Easy-to-Understand-100-Easy
+
+T.C==>(N*N)
+S.C==>O(1)
+
+package PODT;
+
+public class _1975_Maximum_Matrix_Sum {
+    public static void main(String[] args) {
+        int [][]matrix = {{1,2,3},{-1,-2,-3},{1,2,3}};
+        long ans=maxMatrixSum(matrix);
+        System.out.println(ans);
+    }
+    public static long maxMatrixSum(int[][] matrix) {
+        long total = 0;
+        int count_negative = 0;
+        int min = Integer.MAX_VALUE;
+        for(int i = 0;i<matrix.length;i++){
+            for(int j = 0;j<matrix[i].length;j++){
+                if(matrix[i][j] < 0) count_negative++;
+                total += Math.abs(matrix[i][j]);
+                min = Math.min(min, Math.abs(matrix[i][j]));
+            }
+        }
+        if(count_negative % 2 == 0){
+            return total;
+        }
+        else
+            return total - 2 * min;
+    }
+}
